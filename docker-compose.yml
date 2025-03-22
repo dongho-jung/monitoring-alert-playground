@@ -1,0 +1,14 @@
+version: "3"
+services:
+  grafana:
+    image: donghojung/playground-grafana
+    build:
+      context: ./grafana
+    ports:
+      - "3000:3000"
+  victoria-metrics:
+    image: donghojung/playground-victoria-metrics
+    build:
+      context: ./victoria-metrics
+    ports:
+      - "8428:8428"
